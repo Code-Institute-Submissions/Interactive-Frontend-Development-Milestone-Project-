@@ -273,6 +273,21 @@ li {
   margin-left: -15px;
 }
 
+.plan-content {
+	margin-top: -5rem;
+	position: relative;
+	z-index: 1;
+}
+
+.text-white {
+	color: #fff !important;
+	font-family: Courier;
+}
+
+.form-control {
+	font-family: Courier !important; 
+}
+
 .list-hours {
 	font-size: .9rem
 }
@@ -318,16 +333,23 @@ li {
 }
 
 .btn-primary {
-	background-color: #e6a756;
-	border-color: #e6a756
+  padding: 5px !important;
+  margin: 10px 0px 10px 0px;
+  border: 2px solid #006B38 !important;
+  background-color: #101820;
+  font-family: Courier;
 }
 
-.btn-primary:active,
-.btn-primary:focus,
-.btn-primary:hover {
-	background-color: #df902a;
-	border-color: #df902a
+.btn-primary:focus {
+  background-color: #fff !important;
+  color: #006B38 !important;
 }
+
+.btn-primary:hover {
+  background-color: #fff !important;
+  color: #006B38 !important;
+}
+
 
 .font-weight-light {
 	font-weight: 100!important

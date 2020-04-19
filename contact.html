@@ -60,62 +60,53 @@
   </nav>
 
     <section class="page-section cta">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-9 mx-auto">
-            <div class="cta-inner text-center rounded">
-              <h2 class="section-heading mb-5">
-                <span class="section-heading-upper">Come On In</span>
-                <span class="section-heading-lower">We're Open</span>
-              </h2>
-              <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
-                <li class="list-unstyled-item list-hours-item d-flex">
-                  Sunday
-                  <span class="ml-auto">Closed</span>
-                </li>
-                <li class="list-unstyled-item list-hours-item d-flex">
-                  Monday
-                  <span class="ml-auto">7:00 AM to 8:00 PM</span>
-                </li>
-                <li class="list-unstyled-item list-hours-item d-flex">
-                  Tuesday
-                  <span class="ml-auto">7:00 AM to 8:00 PM</span>
-                </li>
-                <li class="list-unstyled-item list-hours-item d-flex">
-                  Wednesday
-                  <span class="ml-auto">7:00 AM to 8:00 PM</span>
-                </li>
-                <li class="list-unstyled-item list-hours-item d-flex">
-                  Thursday
-                  <span class="ml-auto">7:00 AM to 8:00 PM</span>
-                </li>
-                <li class="list-unstyled-item list-hours-item d-flex">
-                  Friday
-                  <span class="ml-auto">7:00 AM to 8:00 PM</span>
-                </li>
-                <li class="list-unstyled-item list-hours-item d-flex">
-                  Saturday
-                  <span class="ml-auto">9:00 AM to 5:00 PM</span>
-                </li>
-              </ul>
-              <p class="address mb-5">
-                <em>
-                  <strong>1116 Orchard Street</strong>
-                  <br>
-                  Golden Valley, Minnesota
-                </em>
-              </p>
-              <p class="mb-0">
-                <small>
-                  <em>Call Anytime</em>
-                </small>
-                <br>
-                (317) 585-8468
-              </p>
-            </div>
-          </div>
+     
+<div class="container align-items-center">
+
+            <form class="container align-items-center" onsubmit="openModal()" id="myForm">
+                <div class="row">
+                    <div class="form-group col-lg-4">
+                        <label class="text-white">Name</label>
+                        <input type="text" name="yourname" class="form-control" placeholder="Full Name" Required>
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label class="text-white">Email Address</label>
+                        <input type="Email" name="email" class="form-control" placeholder="Email Address" Required>
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label class="text-white">Phone</label>
+                        <input type="number" id="number" class="form-control" placeholder="Please Enter Your Number" Required>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group col-lg-12">
+                        <label class="text-white">Message</label>
+                        <textarea name="comments" rows="10" cols="40" class="form-control" placeholder="Comments" Required></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content text-white bg-grey">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Thank you for getting in touch. I will check your message and get back as soon as possible!</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
+            </form>
+
         </div>
-      </div>
+    
     </section>
 
     <section class="page-section about-heading">
