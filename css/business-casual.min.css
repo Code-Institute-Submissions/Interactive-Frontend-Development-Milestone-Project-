@@ -118,7 +118,7 @@ p {
 }
 
 #mainNav .navbar-brand {
-	color: #e6a756;
+	color: #26b36c;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -138,7 +138,7 @@ p {
 		color: rgba(255, 255, 255, .4);
 	}
 	#mainNav .navbar-nav .nav-item.active .nav-link:hover {
-		color: #e6a756;
+		color: #26b36c;
 	}
 }
 
@@ -230,6 +230,15 @@ p {
 		z-index: 1;
 		max-width: 50vw
 	}
+}
+
+.header-link {
+	text-decoration: none !important;
+	color: #006B38!important;
+}
+
+.header-link:hover{
+	color: #26b36c !important;
 }
 
 .p-home {
@@ -359,4 +368,44 @@ li {
 
 .font-weight-light {
 	font-weight: 100!important
+}
+
+/* Google maps sidebar */
+
+#panel {
+    height: 100%;
+    width: null;
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: all .2s ease-out;
+}
+
+.open {
+    width: 250px;
+}
+
+/* Styling for place details */
+.hero {
+    width: 100%;
+    height: auto;
+    max-height: 166px;
+    display: block;
+}
+
+.place,
+p {
+    font-family: 'open sans', arial, sans-serif;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.details {
+    color: darkslategrey;
+}
+
+a {
+    text-decoration: none;
+    color: cadetblue;
 }
