@@ -1,4 +1,4 @@
- /* Note: This example requires that you consent to location sharing when
+ /* This example requires that you consent to location sharing when
      * prompted by your browser. If you see the error "Geolocation permission
      * denied.", it means you probably did not give permission for the browser * to locate you. */
     let pos;
@@ -16,13 +16,14 @@
       /* TODO: Step 4A3: Add a generic sidebar */
       infoPane = document.getElementById('panel');
 
-      // Try HTML5 geolocation
+      // This is used to get the current location of the device.
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
           pos = {
             lat: position.coords.latitude,
             lng: position.coords.longitude
           };
+      //Initializes the map within the "map" div and sets the current devices's location in the center.    
           map = new google.maps.Map(document.getElementById('map'), {
             center: pos,
             zoom: 16
@@ -46,10 +47,10 @@
       }
     }
 
-    // Handle a geolocation error
+    // Handle a geolocation error when current user's location isn't identified.
     function handleLocationError(browserHasGeolocation, infoWindow) {
-      // Set default location to Sydney, Australia
-      pos = { lat: -33.856, lng: 151.215 };
+      // Set default location to London Northolt.
+      pos = { lat: 51.5466, lng: -0.3731 };
       map = new google.maps.Map(document.getElementById('map'), {
         center: pos,
         zoom: 16
@@ -57,6 +58,7 @@
 
       // Display an InfoWindow at the map center
       infoWindow.setPosition(pos);
+      // The message shown if the user doesn't allow their location or if browserdoesn't support location.
       infoWindow.setContent(browserHasGeolocation ?
         'Geolocation permissions denied. Using default location.' :
         'Error: Your browser doesn\'t support geolocation.');
@@ -67,12 +69,12 @@
       getNearbyPlaces(pos);
     }
 
-    // Perform a Places Nearby Search Request
+    // Perform a Places Nearby Search Request for nearby pure gyms.
     function getNearbyPlaces(position) {
       let request = {
         location: position,
         rankBy: google.maps.places.RankBy.DISTANCE,
-        keyword: 'pure gym'
+        keyword: 'pure gym',
       };
 
       service = new google.maps.places.PlacesService(map);
@@ -95,7 +97,6 @@
           title: place.name
         });
 
-        /* TODO: Step 4B: Add click listeners to the markers */
         // Add click listener to each marker
         google.maps.event.addListener(marker, 'click', () => {
           let request = {
@@ -105,8 +106,8 @@
           };
 
           /* Only fetch the details of a place when the user clicks on a marker.
-           * If we fetch the details for all place results as soon as we get
-           * the search response, we will hit API rate limits. */
+           If we fetch the details for all place results as soon as we get
+           the search response, we will hit API rate limits. */
           service.getDetails(request, (placeResult, status) => {
             showDetails(placeResult, marker, status)
           });
@@ -120,7 +121,6 @@
       map.fitBounds(bounds);
     }
 
-    /* TODO: Step 4C: Show place details in an info window */
     // Builds an InfoWindow to display details above the marker
     function showDetails(placeResult, marker, status) {
       if (status == google.maps.places.PlacesServiceStatus.OK) {
@@ -138,7 +138,6 @@
       }
     }
 
-    /* TODO: Step 4D: Load place details in a sidebar */
     // Displays place details in a sidebar
     function showPanel(placeResult) {
       // If infoPane is already open, close it
@@ -190,3 +189,45 @@
       // Open the infoPane
       infoPane.classList.add("open");
     }
+    
+    
+    
+    //The BMR Calculator
+    
+    /* Calculate MAN BMR */
+(function () {
+	function calculatemanBMR(manWeight, manHeight, manAge) {
+		manWeight = parseFloat(manWeight);
+		manHeight = parseFloat(manHeight);
+		manAge = parseFloat(manAge);
+		return ((manWeight * 10) + (manHeight * 6.25) - (manAge *5) + 5);
+	}
+
+	var manBMR = document.getElementById("manBMR");
+	if (manBMR) {
+		manBMR.onsubmit = function () {
+			this.result.value = calculatemanBMR(this.manWeight.value, this.manHeight.value, this.manAge.value);
+			return false;
+		};
+	}
+}());
+
+
+
+/* Calculate Woman BMR */
+(function () {
+	function calculatewomanBMR(womanWeight, womanHeight, womanAge) {
+		womanWeight = parseFloat(womanWeight);
+		womanHeight = parseFloat(womanHeight);
+		womanAge = parseFloat(womanAge);
+		return ((womanWeight * 10) + (womanHeight * 6.25) - (womanAge *5) - 161);
+	}
+
+	var womanBMR = document.getElementById("womanBMR");
+	if (womanBMR) {
+		womanBMR.onsubmit = function () {
+			this.result.value = calculatewomanBMR(this.womanWeight.value, this.womanHeight.value, this.womanAge.value);
+			return false;
+		};
+	}
+}());
