@@ -189,45 +189,5 @@
       // Open the infoPane
       infoPane.classList.add("open");
     }
+  
     
-    
-    
-    //The BMR Calculator
-    
-    /* Calculate MAN BMR */
-(function () {
-	function calculatemanBMR(manWeight, manHeight, manAge) {
-		manWeight = parseFloat(manWeight);
-		manHeight = parseFloat(manHeight);
-		manAge = parseFloat(manAge);
-		return ((manWeight * 10) + (manHeight * 6.25) - (manAge *5) + 5);
-	}
-
-	var manBMR = document.getElementById("manBMR");
-	if (manBMR) {
-		manBMR.onsubmit = function () {
-			this.result.value = calculatemanBMR(this.manWeight.value, this.manHeight.value, this.manAge.value);
-			return false;
-		};
-	}
-}());
-
-
-
-/* Calculate Woman BMR */
-(function () {
-	function calculatewomanBMR(womanWeight, womanHeight, womanAge) {
-		womanWeight = parseFloat(womanWeight);
-		womanHeight = parseFloat(womanHeight);
-		womanAge = parseFloat(womanAge);
-		return ((womanWeight * 10) + (womanHeight * 6.25) - (womanAge *5) - 161);
-	}
-
-	var womanBMR = document.getElementById("womanBMR");
-	if (womanBMR) {
-		womanBMR.onsubmit = function () {
-			this.result.value = calculatewomanBMR(this.womanWeight.value, this.womanHeight.value, this.womanAge.value);
-			return false;
-		};
-	}
-}());
