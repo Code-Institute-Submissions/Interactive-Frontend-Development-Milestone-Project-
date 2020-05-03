@@ -189,5 +189,8 @@
       // Open the infoPane
       infoPane.classList.add("open");
     }
-  
     
+
+function myPlans() {
+  alert("Training plans are currently work in progress! \nWe will update you as soon as they are ready!");
+}
