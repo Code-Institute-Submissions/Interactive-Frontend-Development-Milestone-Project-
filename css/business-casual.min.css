@@ -23,6 +23,7 @@ p {
 	line-height: 1.75
 }
 
+
 .text-faded {
 	color: rgba(255, 255, 255, .3)
 }
@@ -57,6 +58,39 @@ p {
 	-moz-animation: fadeIn ease 10s;
 	-o-animation: fadeIn ease 10s;
 	-ms-animation: fadeIn ease 10s;
+}
+
+
+@media only screen and (min-width: 769px) {
+	.main-site-heading {
+		display:none !important;
+	}
+	
+}
+
+@media only screen and (max-width: 600px) {
+	.main-site-heading .site-heading-upper{
+		font-size: 1rem;
+		line-height: 2.5rem;
+	}
+	
+	.main-site-heading .site-heading-lower {
+		font-size: 3.2rem;
+		line-height: 2rem;
+	}
+	
+	.mb-3, .my-3 {
+		margin-bottom: 0px !important;
+	}
+	
+	.site-heading {
+		margin-top: 0.5rem !important;
+		margin-bottom: 0.5rem !important;
+	}
+	
+	.page-section {
+		margin-top: 0.5rem !important;
+	} 
 }
 
 /* Main site title animation */
@@ -175,112 +209,6 @@ p {
 	}
 }
 
-/* Website title link CSS */
-
-.header-link {
-	text-decoration: none !important;
-	color: #006B38!important;
-}
-
-.header-link:hover{
-	color: #26b36c !important;
-}
-
-
-/* Bottom image and content section styling for the home page */
-
-.p-home {
-	color: #fff;
-	font-family: Courier;
-}
-
-.Home-pt-section {
-	padding: 50px;
-}
-
-.Pt-section-text {
-	display: block;
-	font-size: 1rem;
-	font-weight: 800;
-	color: #006B38;
-}
-
-#Home-Pt-Image {
-   border-radius: 10%;
-   height: auto;
-   width: 70%;
-}
-
-.why-section {
-	padding-top:30px;
-}
-
-.why-content {
-	margin-top: 20px;
-}
-
-#map {
-	height:400px;
-	width: 600px;
-	background-color: grey;
-}
-
-li {
-	padding-bottom: 15px;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
-.plan-content {
-	margin-top: -5rem;
-	position: relative;
-	z-index: 1;
-}
-
-.text-white {
-	color: #fff !important;
-	font-family: Courier;
-}
-
-.form-control {
-	font-family: Courier !important; 
-}
-
-.list-hours {
-	font-size: .9rem
-}
-
-.list-hours .list-hours-item {
-	border-bottom: 1px solid rgba(230, 167, 86, .5);
-	padding-bottom: .25rem;
-	margin-bottom: 1rem;
-	font-style: italic
-}
-
-.list-hours .list-hours-item.today {
-	font-weight: 700;
-	color: #e6a756
-}
-
-@media (min-width:992px) {
-	.list-hours {
-		width: 50%;
-		font-size: 1.1rem
-	}
-}
-
-.address strong {
-	font-size: 1.2rem
-}
-
-.footer {
-	background-color: rgba(16, 24, 32, .9)
-}
 
 .text-primary {
 	color: #006B38!important;
@@ -318,6 +246,190 @@ li {
 	font-weight: 100!important
 }
 
+/* Website title link CSS */
+
+.header-link {
+	text-decoration: none !important;
+	color: #006B38!important;
+}
+
+.header-link:hover{
+	color: #26b36c !important;
+}
+
+
+/* Bottom image and content section styling for the home page */
+
+.p-home {
+	color: #fff;
+	font-family: Courier;
+}
+
+.Home-pt-section {
+	padding: 50px;
+}
+
+.Pt-section-text {
+	display: block;
+	font-size: 1rem;
+	font-weight: 800;
+	color: #006B38;
+}
+
+#Home-Pt-Image {
+   border-radius: 10%;
+   height: auto;
+   width: 70%;
+}
+
+/*Home page bottom section CSS */
+
+.bottom-section-container {
+		padding: 0px !important;
+	}
+	
+/*Home page media query styling for mobile screens */
+
+@media only screen and (max-width: 600px) {
+	.top-home-section {
+		padding: 1.5rem !important;
+	}
+	
+	.Home-pt-section {
+		padding: 1.5rem !important;
+	}
+	
+	.place p {
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	} 
+	
+	.bottom-home-section {
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+	
+}
+
+
+/*Meet us section CSS */
+
+.meetUs-section {
+	padding-top:30px;
+}
+
+.meetUs-content-section {
+	margin-top: 20px;
+}
+
+#map {
+	height:400px;
+	width: 600px;
+	background-color: grey;
+}
+
+/*Meet us media query styling */
+
+@media (min-width:992px) {
+	
+#map {
+	height:400px;
+	width: 600px;
+	background-color: grey;
+}
+
+}
+
+@media only screen and (max-width: 600px) {
+	
+#MeetUs-MainImage {
+	display:none !important;
+}
+	
+.meetus-section {
+	padding-top: 0px !important;
+}	
+	
+.p-5 {
+	padding: 1.5rem !important;
+}
+
+.ul-mobile {
+	padding-right: 0px !important;
+	padding-left: 10px !important;
+	margin-right: 0px !important;
+	margin-left: 0px !important;
+}
+	
+#map {
+	height:250px;
+	width: 320px;
+	background-color: grey;
+}
+
+}
+
+
+li {
+	padding-bottom: 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.plan-content {
+	margin-top: -5rem;
+	position: relative;
+	z-index: 1;
+}
+
+.text-white {
+	color: #fff !important;
+	font-family: Courier;
+}
+
+.form-control {
+	font-family: Courier !important; 
+}
+
+.address strong {
+	font-size: 1.2rem
+}
+
+.footer {
+	background-color: rgba(16, 24, 32, .9)
+}
+
+
+/* Workout plan section media query */
+@media only screen and (max-width: 600px) {
+	.weightLoss-section {
+		padding-top: 20px !important;
+	}
+}
+
+/* Calculator section CSS */
+.calculator-image img {
+		height: 300px !important;
+	}
+
+/* Calculator section media query */
+@media only screen and (max-width: 600px) {
+	.calculator-image img {
+		height: 200px !important;
+	}
+	.bmr-form {
+		padding-left:15px;
+		padding-right:15px;
+	}
+}
+
+
+
 /* Google maps sidebar */
 
 #panel {
@@ -340,13 +452,6 @@ li {
     height: auto;
     max-height: 166px;
     display: block;
-}
-
-.place,
-p {
-    font-family: 'open sans', arial, sans-serif;
-    padding-left: 18px;
-    padding-right: 18px;
 }
 
 .details {

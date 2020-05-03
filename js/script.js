@@ -13,7 +13,7 @@
       bounds = new google.maps.LatLngBounds();
       infoWindow = new google.maps.InfoWindow;
       currentInfoWindow = infoWindow;
-      /* TODO: Step 4A3: Add a generic sidebar */
+  
       infoPane = document.getElementById('panel');
 
       // This is used to get the current location of the device.
