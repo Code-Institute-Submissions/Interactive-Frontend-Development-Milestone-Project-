@@ -26,7 +26,7 @@
       //Initializes the map within the "map" div and sets the current devices's location in the center.    
           map = new google.maps.Map(document.getElementById('map'), {
             center: pos,
-            zoom: 16
+            zoom:8
           });
           bounds.extend(pos);
 
@@ -53,7 +53,7 @@
       pos = { lat: 51.5466, lng: -0.3731 };
       map = new google.maps.Map(document.getElementById('map'), {
         center: pos,
-        zoom: 16
+        zoom: 8
       });
 
       // Display an InfoWindow at the map center
@@ -190,7 +190,3 @@
       infoPane.classList.add("open");
     }
     
-
-function myPlans() {
-  alert("Training plans are currently work in progress! \nWe will update you as soon as they are ready!");
-}

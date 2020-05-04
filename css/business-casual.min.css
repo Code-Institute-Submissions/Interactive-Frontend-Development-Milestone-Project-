@@ -322,9 +322,15 @@ p {
 	margin-top: 20px;
 }
 
+
+.map-section {
+	height:500px !important;
+	padding: 0px !important;
+}
+
 #map {
-	height:400px;
-	width: 600px;
+	height:100%;
+	width: 100%;
 	background-color: grey;
 }
 
@@ -333,8 +339,8 @@ p {
 @media (min-width:992px) {
 	
 #map {
-	height:400px;
-	width: 600px;
+	height: 100%;
+	width: 100%;
 	background-color: grey;
 }
 
@@ -344,6 +350,11 @@ p {
 	
 #MeetUs-MainImage {
 	display:none !important;
+}
+
+.map-section {
+	height:400px !important;
+	padding: 0px !important;
 }
 	
 .meetus-section {
@@ -362,8 +373,8 @@ p {
 }
 	
 #map {
-	height:250px;
-	width: 320px;
+	height:100%;
+	width: 100%;
 	background-color: grey;
 }
 

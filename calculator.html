@@ -21,7 +21,6 @@
   <!-- Custom styles for this template -->
   <link href="css/business-casual.min.css" rel="stylesheet">
   
-  <script src="js/calculator.js"></script>
 
 </head>
 
@@ -92,7 +91,7 @@
 		            <input id="womanAge" name="womanAge" type="number" placeholder="ex: 23"/>
 	            </p>
 	            <p>
-		            <input type="submit" value="Calculate BMR" />
+         <input type="submit" value="Calculate BMR" />
 		            or
 		            <input type="reset" value="Reset" />
 	            </p>
@@ -125,7 +124,7 @@
 		          <input id="manAge" name="manAge" type="number" placeholder="ex: 23" />
 	          </p>
 	        <p>
-		        <input type="submit" value="Calculate BMR" />
+		        <input id="SubmitMan" type="submit" value="Calculate BMR" />
 		        or
 		        <input type="reset" value="Reset" />
 	        </p>
@@ -173,5 +172,45 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
+
+<script>
+  /* Calculate MAN BMR */
+(function () {
+	function calculatemanBMR(manWeight, manHeight, manAge) {
+		manWeight = parseFloat(manWeight);
+		manHeight = parseFloat(manHeight);
+		manAge = parseFloat(manAge);
+		return ((manWeight * 10) + (manHeight * 6.25) - (manAge *5) + 5);
+	}
+
+	var manBMR = document.getElementById("manBMR");
+	if (manBMR) {
+		manBMR.onsubmit = function () {
+			this.result.value = calculatemanBMR(this.manWeight.value, this.manHeight.value, this.manAge.value);
+			return false;
+		};
+	}
+}());
+
+
+
+/* Calculate Woman BMR */
+(function () {
+	function calculatewomanBMR(womanWeight, womanHeight, womanAge) {
+		womanWeight = parseFloat(womanWeight);
+		womanHeight = parseFloat(womanHeight);
+		womanAge = parseFloat(womanAge);
+		return ((womanWeight * 10) + (womanHeight * 6.25) - (womanAge *5) - 161);
+	}
+
+	var womanBMR = document.getElementById("womanBMR");
+	if (womanBMR) {
+		womanBMR.onsubmit = function () {
+			this.result.value = calculatewomanBMR(this.womanWeight.value, this.womanHeight.value, this.womanAge.value);
+			return false;
+		};
+	}
+}());
+</script>
 
 </html>
