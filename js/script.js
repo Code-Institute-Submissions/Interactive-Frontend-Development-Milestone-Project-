@@ -150,7 +150,6 @@
         infoPane.removeChild(infoPane.lastChild);
       }
 
-      /* TODO: Step 4E: Display a Place Photo with the Place Details */
       // Add the primary photo, if there is one
       if (placeResult.photos) {
         let firstPhoto = placeResult.photos[0];
