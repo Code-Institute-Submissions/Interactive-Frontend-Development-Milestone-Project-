@@ -1,4 +1,4 @@
-Link to deployed website [Personal Portfolio](https://firash94.github.io/Interactive-Frontend-Development-Milestone-Project-/index.html)  
+Link to deployed website [The Fitness World](https://firash94.github.io/Interactive-Frontend-Development-Milestone-Project-/index.html)  
      
 # The Fitness World
 
